@@ -11,7 +11,7 @@ const Home: FC = () => {
     return (
         <div className='h-screen'>
             <Head>
-                <title>web3</title>
+                <title>web3 - test</title>
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <h1 className=''>Hello world!</h1>
