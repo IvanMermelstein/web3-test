@@ -6,14 +6,9 @@ const Login: FC = () => {
     const { isAuthenticated, authenticate } = useMoralis();
     const login = async () => {
         if (!isAuthenticated) {
-            await authenticate({ signingMessage: 'Log in using Moralis' })
-                .then(function (user) {
-                    console.log('logged in user:', user);
-                    console.log(user.get('ethAddress'));
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+            await authenticate().catch(function (error) {
+                console.log(error);
+            });
         }
     };
 
@@ -25,11 +20,11 @@ const Login: FC = () => {
                     height={200}
                     width={200}
                     alt='Login image'
-                    className='object-cover rounded-full'
+                    className='object-cover rounded-full bg-gray-900'
                 />
                 <button
                     className='bg-yellow-400 rounded-lg py-3 w-48 font-bold hover:animate-pulse animate-none'
-                    onClick={login}>
+                    onClick={() => login()}>
                     LOGIN
                 </button>
             </div>
