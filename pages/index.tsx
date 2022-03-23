@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { useMoralis } from 'react-moralis';
 import Header from '../components/Header';
 import Login from '../components/Login';
+import Messages from '../components/Messages';
 
 const Home: FC = () => {
     const { isAuthenticated } = useMoralis();
@@ -18,6 +19,7 @@ const Home: FC = () => {
 
             <div className='max-w-screen-2xl mx-auto'>
                 <Header />
+                <Messages />
             </div>
         </div>
     );

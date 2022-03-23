@@ -24,8 +24,8 @@ const Header: FC = () => {
                     <div className='relative h-48 w-48 lg:mx-auto border-pink-500 border-4 rounded-full'>
                         <Avatar username={user.getUsername()} logoutOnPress />
                     </div>
-                    <h1 className='text-3xl'>Welcom to WEB3</h1>
-                    <h2 className='text-5xl font-bold truncate'>
+                    <h1 className='sm:text-3xl text-lg mt-3'>Welcom to WEB3</h1>
+                    <h2 className='sm:text-5xl text-2xl font-bold truncate'>
                         {user.getUsername()}
                     </h2>
                     <ChangeUserName />
